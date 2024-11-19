@@ -1,0 +1,25 @@
+{
+  "name": "bookmark-app",
+  "version": "1.0.0",
+  "description": "a bookmark app ",
+  "main": "./src/main.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ekoxyprince/bookmark-app.git"
+  },
+  "keywords": [
+    "bookmark",
+    "app",
+    "desktop",
+    "electron"
+  ],
+  "author": "ekoxyprince",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ekoxyprince/bookmark-app/issues"
+  },
+  "homepage": "https://github.com/ekoxyprince/bookmark-app#readme"
+}
