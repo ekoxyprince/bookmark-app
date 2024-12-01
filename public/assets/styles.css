@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+header{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    padding: 5px;
+    transition: all 0.53s ease;
+}
+header.sticky{
+    position: fixed;
+    top: 0;
+    background-color: #ccc;
+
+}
+#show-modal{
+    padding: 10px;
+    background-color: #adadf0;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    text-align: center;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    box-shadow: 1px 2px 2px rgba(0, 0, 0,0.3);
+    border-radius: 10px;
+    cursor: pointer;
+}
+#show-modal:active{
+ box-shadow: none;
+}
+header input{
+ flex:1;
+ margin-left: 10px;
+ padding: 5px 20px;
+}
+#container{
+    width: 100%;
+    height: auto;
+}
+#no-item{
+    text-align: center;
+}
+#modal{
+    position:fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0,0.7);
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5px;
+    display: none;
+}
+#modal.add{
+    display: flex;
+}
+#modal input{
+    flex:1;
+    height: 30px;
+}
+#modal #add-item{
+    padding: 7px 2px;
+    background-color: cornflowerblue;
+    outline: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    box-shadow: 1px 2px 2px rgba(0, 0, 0,0.3);
+}
+#modal #close-modal{
+    padding: 7px 2px;
+    background-color: red;
+    color: white;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 1px 2px 2px rgba(0, 0, 0,0.3);
+}
+#modal #close-modal:active,#modal #add-item:active{
+    box-shadow: none;
+}
+.read-item{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 2px;
+    border-bottom: 1px solid #ccc;
+    margin-top: 10px;
+    border-left: 4px solid grey;
+    margin-left: 4px;
+    cursor: pointer;
+    -webkit-user-select:none;
+}
+.read-item:hover{
+    background-color: aliceblue;
+}
+.read-item.selected{
+    border-left: 6px solid lightblue; 
+}
+.read-item:last-child{
+    border-bottom: none;
+}
+#items{
+  padding: 10px;
+}
+.read-item img{
+    width: 75px;
+    height: 75px;
+}
+.read-item h2{
+    font-size: 15px;
+    font-weight: 500;
+}
