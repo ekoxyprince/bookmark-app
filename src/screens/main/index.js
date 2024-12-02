@@ -22,7 +22,7 @@ const createMainWindow = function () {
       preload: path.join(process.cwd(), "src", "preload", "index.js"),
     },
   });
-  appMenu();
+  appMenu(mainWindow);
   mainWindow.on("close", () => {
     mainWindow = null;
   });

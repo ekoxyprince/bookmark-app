@@ -66,6 +66,12 @@ window.ipcRenderer.on("item-sent-successfully", (e, data) => {
   console.log(e, data);
   addItemFunction(data);
 });
+window.ipcRenderer.on("add-new-bookmark", (e, data) => {
+  showModal.click();
+});
+window.ipcRenderer.on("read-selected-item", () => {
+  handleEnterKey();
+});
 showModal.onclick = () => {
   modal.classList.toggle("add");
   itemUrl.focus();

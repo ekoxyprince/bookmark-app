@@ -1,10 +1,25 @@
 const { Menu, shell } = require("electron");
 
-module.exports = () => {
+module.exports = (appWin) => {
   const template = [
     {
       label: "Items",
-      subMenu: [],
+      submenu: [
+        {
+          label: "Add New",
+          accelerator: "CmdOrCtrl+O",
+          click: () => {
+            appWin.webContents.send("add-new-bookmark");
+          },
+        },
+        {
+          label: "Read Item",
+          accelerator: "CmdOrCtrl+Enter",
+          click: () => {
+            appWin.webContents.send("read-selected-item");
+          },
+        },
+      ],
     },
     {
       role: "editMenu",
@@ -13,8 +28,8 @@ module.exports = () => {
       role: "windowMenu",
     },
     {
-      label: "Help Center",
-      subMenu: [
+      role: "help",
+      submenu: [
         {
           label: "Learn More",
           click: () => {
